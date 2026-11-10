@@ -4,5 +4,5 @@ Nome: Enzo Biloschycki Magalhães Cesar | RM: 556736
 Nome: Nicolas Varella Barros Padovam | RM: 556586
 Nome: Vitor Portela Fantinato | RM: 554540
 GITHUB: https://github.com/vitorportelaf/GS-MICROSERVICOS-2-SEMESTRE
-API AZURE: https://<fqdn-do-container-app>
-DOCKER HUB: https://hub.docker.com/r/<usuario-dockerhub>/hora-certa
+API AZURE: https://hora-certa-554540.purplehill-75e7ba69.brazilsouth.azurecontainerapps.io
+DOCKER HUB: https://hub.docker.com/r/vitorportelaf/hora-certa
