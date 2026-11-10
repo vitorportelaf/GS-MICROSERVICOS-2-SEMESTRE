@@ -19,8 +19,8 @@ Engineering & IT Services* (turma 3SIR).
 | Item | Link |
 |------|------|
 | GitHub | <https://github.com/vitorportelaf/GS-MICROSERVICOS-2-SEMESTRE> |
-| API no Azure (Swagger) | `https://<fqdn-do-container-app>` |
-| Docker Hub | `https://hub.docker.com/r/<usuario-dockerhub>/hora-certa` |
+| API no Azure (Swagger) | `https://hora-certa-554540.purplehill-75e7ba69.brazilsouth.azurecontainerapps.io` |
+| Docker Hub | `https://hub.docker.com/r/vitorportelaf/hora-certa` |
 
 ---
 
@@ -203,12 +203,12 @@ docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE=dev -e DB_SERVER_URL=host.dock
 
 ### Imagem no Docker Hub
 
-- **Imagem:** `<usuario-dockerhub>/hora-certa`
+- **Imagem:** `vitorportelaf/hora-certa`
 - **Tags:** `latest`, `v<número da execução>` (ex.: `v3`) e o SHA curto do commit (ex.: `3f2a9c1`)
 - **Obter:**
 
 ```sh
-docker pull <usuario-dockerhub>/hora-certa:latest
+docker pull vitorportelaf/hora-certa:latest
 ```
 
 ## 🔄 Continuous Delivery (GitHub Actions)
