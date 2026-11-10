@@ -1,0 +1,40 @@
+# Ambiente local: SQL Server 2022 + API Hora Certa
+# Uso: copie .env.example para .env e rode "docker compose up --build"
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: ${DB_PWD:?Defina DB_PWD no arquivo .env}
+    ports:
+      - "1433:1433"
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P \"$$MSSQL_SA_PASSWORD\" -Q \"SELECT 1\" || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  # Cria o banco "horacerta" na primeira execução
+  sqlserver-init:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    environment:
+      MSSQL_SA_PASSWORD: ${DB_PWD}
+    entrypoint: ["/bin/bash", "-c", "/opt/mssql-tools18/bin/sqlcmd -C -S sqlserver -U sa -P \"$$MSSQL_SA_PASSWORD\" -Q \"IF DB_ID('horacerta') IS NULL CREATE DATABASE horacerta\""]
+
+  api:
+    build: .
+    depends_on:
+      sqlserver-init:
+        condition: service_completed_successfully
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      DB_SERVER_URL: sqlserver
+      DB_SERVER_PORT: "1433"
+      DB_SCHEMA: horacerta
+      DB_USER: sa
+      DB_PWD: ${DB_PWD}
+    ports:
+      - "8080:8080"

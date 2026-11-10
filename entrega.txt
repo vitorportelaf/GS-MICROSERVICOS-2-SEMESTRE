@@ -1,0 +1,8 @@
+GLOBAL SOLUTION - 3SIR
+INTEGRANTES
+Nome: Enzo Biloschycki Magalhães Cesar | RM: 556736
+Nome: Nicolas Varella Barros Padovam | RM: 556586
+Nome: Vitor Portela Fantinato | RM: 554540
+GITHUB: https://github.com/vitorportelaf/GS-MICROSERVICOS-2-SEMESTRE
+API AZURE: https://<fqdn-do-container-app>
+DOCKER HUB: https://hub.docker.com/r/<usuario-dockerhub>/hora-certa
