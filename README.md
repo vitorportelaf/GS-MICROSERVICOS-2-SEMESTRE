@@ -235,7 +235,7 @@ A API roda no **Azure Container Apps** com a imagem do Docker Hub (profile `prd`
 Database**. As variáveis `DB_*` ficam configuradas no Container App, e a senha fica como *secret*. O passo a
 passo completo está em [`DEPLOY_AZURE.md`](DEPLOY_AZURE.md).
 
-- **URL:** `https://<fqdn-do-container-app>` (abre o Swagger)
+- **URL:** <https://hora-certa-554540.purplehill-75e7ba69.brazilsouth.azurecontainerapps.io> (abre o Swagger)
 
 ## 🧪 Como testar
 
