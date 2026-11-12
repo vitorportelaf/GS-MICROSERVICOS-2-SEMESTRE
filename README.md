@@ -19,8 +19,9 @@ Engineering & IT Services* (turma 3SIR).
 | Item | Link |
 |------|------|
 | GitHub | <https://github.com/vitorportelaf/GS-MICROSERVICOS-2-SEMESTRE> |
-| API no Azure (Swagger) | `https://hora-certa-554540.purplehill-75e7ba69.brazilsouth.azurecontainerapps.io` |
-| Docker Hub | `https://hub.docker.com/r/vitorportelaf/hora-certa` |
+| API no Azure (Swagger) | <https://hora-certa-554540.purplehill-75e7ba69.brazilsouth.azurecontainerapps.io> |
+| Docker Hub | <https://hub.docker.com/r/vitorportelaf/hora-certa> |
+| Vídeo Pitch | <https://www.youtube.com/watch?v=5CE78AJhr7Q> |
 
 ---
 
